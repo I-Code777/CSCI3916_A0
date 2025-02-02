@@ -11,12 +11,13 @@ module.exports = async (phrase) => {
 
     //
     //TODO: return a formattedObj
-    var formattedObj = {
-        data: results.data,
-        status: results.status,
-        statusText: results.statusText,
-        headers: results.headers,
-        requestHeader: results.config.headers
+    var formattedObj =
+    {
+        data: response.data, 
+        status: response.status, 
+        statusText: response.statusText, 
+        headers: response.headers,
+        requestHeader: response.config.headers
     }
 
     //TODO: return the formattedObject
