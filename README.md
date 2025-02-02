@@ -1,4 +1,11 @@
 # Assignment Zero
+# Name: Jessica Nguyen
+# SID: 109098574
+# CSCI 3916 H01
+
+##Notice
+This repository is a copy of the template provided for this assignment. A few changes have been made to meet the requirements of the assignment, but the majority of the repository remains the same.
+
 ## Purpose
 The purpose of this assignment is to work with Postman become familiar with HTTP, and REST through the testing framework provided by Postman.  Furthermore, to check in your first node program to github.
 
