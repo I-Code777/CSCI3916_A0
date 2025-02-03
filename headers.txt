@@ -1,0 +1,20 @@
+This document is used to display the key-value pair in the HTTP headers in the request and response
+
+Book Search Parameters:
+key: q
+value: {{book_title}}
+
+Results:
+Get Book Search
+PASS Status code is 200
+PASS Book title or description includes Turing
+
+Book ID Parameters:
+key: none
+value: none
+
+Results:
+Get Book ID
+PASS Status code is 200 or 503
+FAIL API returned valid data | AssertionError: expected undefined to exist
+PASS Book title or description includes Turing
