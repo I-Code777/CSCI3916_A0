@@ -1,25 +1,25 @@
-const axios = require('axios')
+const axios = require('axios');
 
 module.exports = async (phrase) => {
-    const results = await axios.get('https://www.googleapis.com/books/v1/volumes', {
-        params: {
-            format: 'json',
-            q: `${phrase}`
-        }
-    })
+    try {
+        const results = await axios.get('https://www.googleapis.com/books/v1/volumes', {
+            params: { q: phrase }
+        });
 
-
-    //
-    //TODO: return a formattedObj
-    var formattedObj =
-    {
-        data: response.data, 
-        status: response.status, 
-        statusText: response.statusText, 
-        headers: response.headers,
-        requestHeader: response.config.headers
+        // Format the response as required
+        return {
+            data: results.data,
+            status: results.status,
+            statusText: results.statusText,
+            headers: results.headers,
+            requestHeader: results.config.headers
+        };
+    } catch (error) {
+        // Handle errors properly by returning error details
+        return {
+            error: error.message,
+            status: error.response?.status || 500,
+            statusText: error.response?.statusText || 'Internal Server Error'
+        };
     }
-
-    //TODO: return the formattedObject
-    return JSON.stringify(results.data);
-}
+};
