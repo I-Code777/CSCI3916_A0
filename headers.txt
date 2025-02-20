@@ -1,20 +1,21 @@
 This document is used to display the key-value pair in the HTTP headers in the request and response
 
-Book Search Parameters:
-key: q
-value: {{book_title}}
-
-Results:
-Get Book Search
-PASS Status code is 200
-PASS Book title or description includes Turing
-
-Book ID Parameters:
-key: none
-value: none
-
-Results:
-Get Book ID
-PASS Status code is 200 or 503
-FAIL API returned valid data | AssertionError: expected undefined to exist
-PASS Book title or description includes Turing
+URL: https://www.googleapis.com/books/v1/volumes?q={{book_title}}
+Method: GET
+Status Code: 200 OK
+User-Agent: PostmanRuntime/7.43.0
+Accept: */*
+Postman-Token: 0cca8a6d-0482-4ebf-8469-c3254f0aabb1
+Host: www.googleapis.com
+Accept-Encoding: gzip, deflate, br
+Connection: keep-alive
+Content-Type: application/json; charset=UTF-8
+Vary: Referer
+Content-Encoding: gzip
+Date: Thu, 20 Feb 2025 19:55:29 GMT
+Server: ESF
+X-XSS-Protection: 0
+X-Frame-Options: SAMEORIGIN
+X-Content-Type-Options: nosniff
+Alt-Svc: h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
+Transfer-Encoding: chunked
